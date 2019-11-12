@@ -1,8 +1,11 @@
 class SearchController < ApplicationController
     # get /search
     def search
-        @results = GuardianApiClient.new.search(params[:q])
+        @app = GuardianApiClient.new
+        @results = GuardianApiClient.new.query(params[:q])
     end
-
+    def show
+        @results = GuardianApiClient.new.query(params[:q])
+    end
 end
 

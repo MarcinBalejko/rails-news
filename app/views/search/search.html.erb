@@ -3,15 +3,16 @@
   <%= f.submit 'search' %>
 <% end %>
 
-<% if @results.any? %>
+<% if @results != nil %>
   <ul>
-  <% @results.each do |r| %>
+  <%= @results.each do |r| %>
     <li><%= r["webTitle"] %></li>
   <% end %>
   </ul>
 <% else %>
-  <p>No results</p>
+  <p>No results yet</p>
 <% end %>
+
 
 
 
