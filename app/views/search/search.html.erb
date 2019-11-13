@@ -6,7 +6,7 @@
 <% if @results != nil %>
   <ul>
   <%= @results.each do |r| %>
-    <li><%= r["webTitle"] %></li>
+    <li><%= r[0]["webTitle"] %></li>
   <% end %>
   </ul>
 <% else %>
