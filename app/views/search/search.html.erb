@@ -5,8 +5,8 @@
 
 <% if @results != nil %>
   <ul>
-  <%= @results.each do |r| %>
-    <li><%= r[0]["webTitle"] %></li>
+  <% @results["response"]["results"].each do |r| %>
+  <li><%= r["webTitle"] %></li>
   <% end %>
   </ul>
 <% else %>
